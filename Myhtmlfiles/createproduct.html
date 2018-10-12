@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create products</title>
+	<style type="text/css">
+		h1{
+			text-align:center;
+			text-transform: uppercase;
+			color: brown;
+
+		}
+		body{
+			background-color: #b9c0cc;
+		}
+		.product{
+			margin:60px;
+		}
+		.fom{
+			background-color: #f1f1f1;
+			height: 80%;
+
+
+		}
+		.fom form p label input{
+			float: right;
+			width: 60%;
+	
+			margin: 5px;
+			border-radius: 3px;
+
+		}
+		.fom form p label input{
+			float: left;
+			margin-left: 20%;
+			border-radius: 3px;
+
+		}
+		.fom form p #btn{
+			
+			margin-left: 20%;
+			border-radius: 3px;
+			border: none;
+			background: green;
+			float: right;
+
+
+		}
+		@media screen and (max-width: 300px) {
+    .form{
+        display: block;
+    }
+
+	</style>
+</head>
+<body>
+	<div class="product">
+		<header>
+			<h1>Add Products </h1>
+		</header>
+		<section>
+			<div class="fom">
+				<form>
+					<p>
+						<label for="name">Category
+							<input type="text" name="" id="name">
+						</label>
+					</p>
+					<p>
+						<label for="productname">Product Name
+							<input type="text" name="" id="productname">
+					    </label>
+					</p>
+					<p>
+						<label for="unitprice">Price
+							<input type="text" id="unitprice" name="">
+						</label>
+					</p>
+					<p>
+						<label for="quantity">Quantity available
+							<input type="text" id="quantity" name="">
+						</label>
+					</p>
+					<p>
+						<label for="description">Description
+							<input type="text-area" name="">
+						</label>
+					</p>
+					<p>
+						<button type="submit" name="" placeholder="Create Product" id="btn">Create Products
+						</button>
+
+					</p>
+				</form>
+				
+			</div>
+			
+	</section>
+
+		
+	</div>
+	
+</body>
+</html>
