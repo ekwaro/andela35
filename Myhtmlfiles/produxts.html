@@ -6,12 +6,37 @@
 		table, th, td{
 			border: 2px solid black;
 		}
+		th{
+			height: 50px;
+			text-align: center;
+			background-color: brown;
+			color: white;
+		}
+		td{
+			height: 50px;
+			vertical-align: bottom;
+
+		}
+		th,td{
+			padding: 15px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+		tr:hover{
+			background-color: #f5f5;
+
+
+		}
+		tr:nth-child(odd){
+			background-color: #f1f1f1;
+		}
 		table{
 			align-content: center;
 			margin-left: 10%;
-			margin-top: 10%;
-			width: 80%;
+			margin-top: 5%;
+			width: 100%;
 			background-color: gray;
+			border-collapse: collapse;
 
 		}
 		header h2{
@@ -29,81 +54,88 @@
 		}
 		button{
 			border-radius: 5px;
+			background-color: #b7babf;
 			float: right;
 			margin-right: 10%;
-			margin-top: 9%;
+			margin-top: 50px;
+			padding: 8px;
 
 		}
 		body{
-			background-color: #ffffff;
+			background-color: #b9c0cc;
 		}
 	</style>
 </head>
 <body>
 	<header>
 		<h2>PRODUCTS IN STOCKS</h2>
-		<button type="button">CREATE PRODUCTS</button>
+		<a href="createproduct"><button type="button" >CREATE PRODUCTS</button></a>
 	</header>
-
-	<table>
+	<div>
+		<table style="overflow-x: auto;">
 		<tr>
 			<th>Product Name</th>
 			<th>Category</th>
 			<th>Quantity</th>
 			<th>Description</th>
-			<th>DELETE</th>
-			<th>MODIFY</th>
+			<th>DELETE | MODIFY</th>
+			
 		</tr>
 		<tr>
 			<td>Samsung</td>
 			<td> Smart phones</td>
 			<td>7</td>
 			<td>Newest model</td>
-			<td><a href="">DELETE</a></td>
-			<td><a href="">MODIFY</a></td>
+			<td><a href="">DELETE<</a> | <a href="">MODIFY</a></td>
+			
 		</tr>
 		<tr>
 			<td>iphone</td>
 			<td>Smart phones</td>
 			<td>16</td>
 			<td>iphone 6x</td>
-			<td><a href="">DELETE</a></td>
-			<td><a href="">MODIFY</a></td>
+			<td><a href="">DELETE</a> | <a href="">MODIFY</a></td>
+			
 		</tr>
 		<tr>
 			<td>Acer</td>
 			<td>laptops</td>
 			<td>54</td>
 			<td>newest model</td>
-			<td><a href="">DELETE</a></td>
-			<td><a href="">MODIFY</a></td>
+			<td><a href="">DELETE </a> |<a href="">MODIFY</a></td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>Probox</td>
 			<td>cars</td>
 			<td>16</td>
 			<td>German made</td>
-			<td><a href="">DELETE</a></td>
-			<td><a href="">MODIFY</a></td>
+			<td><a href="">DELETE</a> | <a href="">MODIFY</a></td>
+
 		</tr>
 		<tr>
 			<td>Prado</td>
 			<td>cars</td>
 			<td>5</td>
 			<td>good condition</td>
-			<td><a href="">DELETE</a></td>
-			<td><a href="">MODIFY</a></td>
+			<td><a href="">DELETE</a> |
+			 <a href="">MODIFY</td>
+			
 		</tr>
 		<tr>
 			<td>Messi</td>
 			<td>footballers</td>
 			<td>1</td>
 			<td>Good Sorer</td>
-			<td><a href="">DELEYE</a></td>
-			<td><a href="">MODIFY</a></td>
+			<td><a href="">DELEYE</a> | <a href="">MODIFY</a></td>
+		
 		</tr>
 	</table>
 
+		
+	</div>
+
+	
 
 </body>
 </html>

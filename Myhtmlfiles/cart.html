@@ -22,14 +22,14 @@
 		text-transform:uppercase;
 		float: left;
 		border-right: 3px solid #ffffff;
-		width:48%;
+		width:60%;
 
 	}
 	.container h2{
 		float: right;
 		text-decoration: none;
 		text-transform: uppercase;
-		width: 40%;
+		width: 30%;
 		padding-right: 5%;
 	}
 	.buyer{
@@ -38,52 +38,102 @@
 
 
 	}
-	input{
-		float: right;
-		line-height: 1.5;
-		border-radius: 3px
-		width:60%;
+	
+	.dropdown:hover .dropbtn{
+		background-color: #3e8e41;
 	}
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+	.dropdown-content a:hover {
+		background-color: #f1f1f1
+	}
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+	.dropbtn {
+		background-color: #4CAF50;
+		color: white;
+		padding: 16px;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+}
+.mycontainer{
+	margin-top: 100px;
+	height: 40%;
+	background-color: white;
+	display: block;
+	border: 5px;
+	margin-left: 2px;
+	margin-left: 60px;
 
-		
+}
+.contain .buyer .enter-input{
+	width: 70%;
+	display: block;
+}
+button{
+	background: green;
+	border-radius: 4px;
+	padding: 6px;
+	border: none;
+}
+
 	</style>
 </head>
 <body>
-	<div>
+	<div class="mycontainer">
 		<header>
 			<div class="container">
 				<h1>
 					Add  products to the customer Cart
 				</h1>
 				<h2>
-					<a href="salesrecord.html">View Sale Records</a>
+					<a href="sales.html">View Sale Records</a>
 		        </h2>
 		    </div>
 		</header>
-		<section>
-			<div class="container">
-				<form class="buyer">
-					<p>Product Name
-						<input type="text" name="">
-					</p>
-					<p>Quantity Available
-					<input type="text" name="">
-					<p/>
-						
-					<p>Price
-						<input type="text" name="">
-					</p>
-					<button type="submit">
-						Submit
-					</button>
-					
-				
-			</form>
-			
-		</div>
-	</section>
-
 		
+			<div class="contain">
+				<form class="buyer">
+					<p>
+						<div class="dropdown">
+							<input type="submit" class="dropbtn" value="Choose product">
+							<div class="dropdown-content">
+								<a href="">prado</a>
+								<a href="">iphone</a>
+								<a href="">Messi</a>
+								<a href="">Ronaldo</a>
+							</div>
+						</div>
+					</p>
+					<div class="enter-input">
+						<p>
+							<label for="quantity">Quantity Available
+								<input type="text" name="" id="quantity">
+						<p/>
+						<p>Price
+							<input type="text" name="">
+						</p>
+						<button type="submit">
+							Submit
+						</button>
+					</div>
+					
+				</form>
+			</div>
 	</div>
 	
 </body>
