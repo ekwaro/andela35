@@ -7,41 +7,52 @@
 			text-align:center;
 			text-transform: uppercase;
 			color: brown;
+			font-weight: 200%;
+			font-size: 25px;
+			padding: 20px;
 
 		}
 		body{
-			background-color;
+			background-color:#f5f5f5;
 		}
 		.product{
-			margin:60px;
+			margin:20px;
+			background-color:#ffffff;
+			margin-top: 50px;
+			
+			
 		}
 		.fom{
-			background-color: #f1f1f1;
-			height: 80%;
+			background-color: #f4f4f4;
+			height: 100%;
+			display: inline-block;
+			margin-left: 500px;
 
 
 		}
 		.fom form p label input{
 			float: right;
-			width: 60%;
-	
-			margin: 5px;
+			width: 100%;
 			border-radius: 3px;
+			padding: 10px;
 
 		}
-		.fom form p label input{
-			float: left;
-			margin-left: 20%;
-			border-radius: 3px;
+		.mylabel{
+			font-size: 20px;
 
 		}
+		
 		.fom form p #btn{
 			
 			margin-left: 20%;
+			font-size: 20px;
 			border-radius: 3px;
 			border: none;
-			background: green;
+			background: brown;
+			color: #f1f1f1;
+			margin-top: 50px;
 			float: right;
+			padding: 10px;
 
 
 		}
@@ -61,27 +72,27 @@
 			<div class="fom">
 				<form>
 					<p>
-						<label for="name">Category
+						<label for="name" class="mylabel">Category<br/>
 							<input type="text" name="" id="name">
 						</label>
 					</p>
 					<p>
-						<label for="productname">Product Name
+						<label for="productname" class="mylabel">Product Name
 							<input type="text" name="" id="productname">
 					    </label>
 					</p>
 					<p>
-						<label for="unitprice">Price
+						<label for="unitprice" class="mylabel">Price
 							<input type="text" id="unitprice" name="">
 						</label>
 					</p>
 					<p>
-						<label for="quantity">Quantity available
+						<label for="quantity" class="mylabel">Quantity available
 							<input type="text" id="quantity" name="">
 						</label>
 					</p>
 					<p>
-						<label for="description">Description
+						<label for="description" class="mylabel">Description
 							<input type="text-area" name="">
 						</label>
 					</p>
