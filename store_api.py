@@ -30,3 +30,9 @@ goods = [
 @app.route('/storemanager/v1/products/', methods=['GET'])
 def get_all_products():
     return jsonify({'goods': goods})
+
+
+@app.route('/storemanager/v1/products/<int:productId>/', methods=['GET'])
+def productgood(productId):
+    item = [product for product in goods if product['id'] == productId]
+    return jsonify({'item': item[0]})
