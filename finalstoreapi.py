@@ -25,7 +25,31 @@ goods = [
 
       }
 ]
-
+sales_made = [{
+         'id': 1,
+         'customer': 'Stanley',
+         'category': 'smart phones',
+         'quantity': 2,
+         'price': 2000,
+         'total': 4000
+     },
+    {
+     'id': 2,
+     'customer': 'Dominic',
+     'category': 'smart phones',
+     'quantity': 1,
+     'price': 2000,
+     'total': 2000
+    },
+    {
+     'id': 3,
+     'customer': 'Brian',
+     'category': 'mercedes',
+     'quantity': 2,
+     'price': 300000,
+     'total': 600000
+     }
+]
 
 @app.route('/api/v1/products/', methods=['GET'])
 def get_all_products():
@@ -50,9 +74,18 @@ def sale(sales_Id):
     except IndexError:
         return 'Your Index Is Out of Range'
 
-
-if __name__ == "__main__":
-    app.run(Debug=True)
+@app.route('/api/v1/sales/', methods=['POST'])
+def create_sales():
+    record = {
+            'id': sales_made[-1]['id'] + 1,
+            'customer': request.json['customer'],
+            'category': request.json['category'],
+            'quantity': request.json['quantity'],
+            'price': request.json['price'],
+            'total': request.json['total']
+        }
+    sales_made.append(record)
+    return jsonify({'sales_made': record}), 201
 
 
 @app.route('/api/v1/products/', methods=['POST'])
@@ -65,3 +98,8 @@ def create_product():
                }
     goods.append(product)
     return jsonify({'goods': product}), 201
+
+
+if __name__ == "__main__":
+    app.run(Debug=True)
+
