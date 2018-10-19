@@ -80,6 +80,12 @@ def sales():
     return jsonify({'sale_made': sales_made}), 200
 
 
+@app.route('/api/v1/sales/<int:sales_Id>/', methods=['GET'])
+def sale(sales_Id):
+    sell = [sell for sell in sales_made if sell['id'] == sales_Id]
+    return jsonify({'item': sell[0]})
+
+
 @app.route('/api/v1/sales/', methods=['POST'])
 def create_sales():
     record = {
