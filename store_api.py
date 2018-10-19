@@ -89,7 +89,7 @@ def create_sales():
 
 
 @app.route('/api/v1/sales/', methods=['GET'])
-def sales():
+def get_sales():
     return jsonify({'sale_made': sales_made}), 200
 
 
