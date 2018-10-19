@@ -86,3 +86,11 @@ def create_sales():
          }
     sales_made.append(record)
     return jsonify({'sales_made': record}), 201
+
+@app.route('/api/v1/sales/', methods=['GET'])
+def sales():
+    return jsonify({'sale_made': sales_made}), 200
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
