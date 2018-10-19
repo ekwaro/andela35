@@ -57,9 +57,14 @@ def get_all_products():
 
 
 @app.route('/api/v1/products/<int:productId>/', methods=['GET'])
-def productgood(productId):
-    item = [product for product in goods if product['id'] == productId]
-    return jsonify({'item': item[0]})
+def get_single_product(productId):
+    try:
+        item = [product for product in goods if product['id'] == productId]
+        return jsonify({'item': item[0]})
+
+    except IndexError:
+        return 'Invalid Input'
+
 
 
 """Admin should be able to add a product"""
