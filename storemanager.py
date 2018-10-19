@@ -87,8 +87,11 @@ def sales():
 
 @app.route('/api/v1/sales/<int:sales_Id>/', methods=['GET'])
 def sale(sales_Id):
-    sell = [sell for sell in sales_made if sell['id'] == sales_Id]
-    return jsonify({'item': sell[0]})
+    try:
+        sell = [sell for sell in sales_made if sell['id'] == sales_Id]
+        return jsonify({'item': sell[0]})
+    except IndexError:
+        return 'Your Index Is Out of Range'
 
 
 @app.route('/api/v1/sales/', methods=['POST'])
