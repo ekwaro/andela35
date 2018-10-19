@@ -51,18 +51,18 @@ sales_made = [{
      }]
 
 
-@app.route('/storemanager/v1/products/', methods=['GET'])
+@app.route('/api/v1/products/', methods=['GET'])
 def get_all_products():
     return jsonify({'goods': goods})
 
 
-@app.route('/storemanager/v1/products/<int:productId>/', methods=['GET'])
+@app.route('/api/v1/products/<int:productId>/', methods=['GET'])
 def get_product(productId):
     item = [product for product in goods if product['id'] == productId]
     return jsonify({'item': item[0]})
 
 
-@app.route('/storemanager/v1/products/', methods=['POST'])
+@app.route('/api/v1/products/', methods=['POST'])
 def create_product():
     product = {
              'id': goods[-1]['id'] + 1,
@@ -74,7 +74,7 @@ def create_product():
     return jsonify({'goods': product}), 201
 
 
-@app.route('/storemanager/v1/sales/', methods=['POST'])
+@app.route('/api/v1/sales/', methods=['POST'])
 def create_sales():
     record = {
          'id': sales_made[-1]['id'] + 1,
@@ -86,6 +86,7 @@ def create_sales():
          }
     sales_made.append(record)
     return jsonify({'sales_made': record}), 201
+
 
 @app.route('/api/v1/sales/', methods=['GET'])
 def sales():
