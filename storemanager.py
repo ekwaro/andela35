@@ -75,6 +75,11 @@ def create_product():
     return jsonify({'goods': product}), 201
 
 
+@app.route('/api/v1/sales/', methods=['GET'])
+def sales():
+    return jsonify({'sale_made': sales_made}), 200
+
+
 @app.route('/api/v1/sales/', methods=['POST'])
 def create_sales():
     record = {
