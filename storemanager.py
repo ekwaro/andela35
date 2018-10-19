@@ -26,6 +26,12 @@ goods = [
       }
 ]
 
+
+@app.route('/api/v1/products/', methods=['GET'])
+def get_all_products():
+    return jsonify({'goods': goods})
+
+
 """Admin should be able to add a product"""
 @app.route('/api/v1/products/', methods=['POST'])
 def create_product():
@@ -38,3 +44,5 @@ def create_product():
     goods.append(product)
     return jsonify({'goods': product}), 201
 
+if __name__ == "__main__":
+    app.run(debug=True)
