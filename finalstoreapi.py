@@ -102,7 +102,7 @@ def create_product():
              'description': request.json['description']
                }
     goods.append(product)
-    return jsonify({'goods': product}), 201
+    return jsonify({'goods': product})
 
 
 if __name__ == "__main__":
